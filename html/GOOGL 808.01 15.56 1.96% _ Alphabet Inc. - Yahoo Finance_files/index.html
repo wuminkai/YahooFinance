@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0116)https://s0.2mdn.net/4601119/1478731758369/Acq_ActiveTraderCustomerService_BROK_Other_P_NO_Desktop_300x250/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>E-Trade - Service [300x250]</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="ad.size" content="width=300,height=250">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<link rel="stylesheet" href="./main-min.css">
+	<script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head>
+
+	<body>
+		<script>
+			var clickTag = 'http://etrade.com';
+		</script>
+		<div id="ad_content" class="alpha-0" style="visibility: inherit; opacity: 1;">
+			<canvas id="canvas" width="300" height="250" class=""></canvas>
+
+			<div id="header_bar" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+				<div id="headline" class="sprite-svg headline"></div>
+			</div>
+
+			<div id="text_1a_holder"><div id="text_1a" class="sprite-svg text_1a" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;"></div></div>
+			<div id="text_1b_holder"><div id="text_1b" class="sprite-svg text_1b" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;"></div></div>
+			<div id="text_1c_holder"><div id="text_1c" class="sprite-svg text_1c" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;"></div></div>
+
+			<div id="text_2a_holder"><div id="text_2a" class="sprite-svg text_2a" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;"></div></div>
+			<div id="text_2b_holder"><div id="text_2b" class="sprite-svg text_2b" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;"></div></div>
+			<div id="text_2c_holder"><div id="text_2c" class="sprite-svg text_2c" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;"></div></div>
+			<div id="text_2d_holder"><div id="text_2d" class="sprite-svg text_2d" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;"></div></div>
+
+			<div id="text_ef1_holder"><div id="text_ef1" class="sprite-svg text_ef1" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div></div>
+			<div id="text_ef2_holder"><div id="text_ef2" class="sprite-svg text_ef2" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div></div>
+			<div id="text_ef3_holder"><div id="text_ef3" class="sprite-svg text_ef3" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div></div>
+			<div id="text_ef4_holder"><div id="text_ef4" class="sprite-svg text_ef4" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div></div>
+			
+			<div id="logo" class="sprite-svg logo" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="legal" class="sprite-svg legal" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+
+			<div id="cta" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+				<div id="ctaBg">
+					<div id="glint" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+				</div>
+				<div id="ctatext" class="sprite-svg cta_text abs-center"></div>
+			</div>
+			
+			<div id="backup" class=""></div>
+		</div>
+
+		<!-- Load scripts -->
+		<script src="./TweenMax.min.js"></script>
+		<script src="./createjs-2015.11.26.min.js"></script>
+		<script src="./paperfold.js"></script>
+		<script src="./main-min.js"></script>
+	
+
+</body></html>
